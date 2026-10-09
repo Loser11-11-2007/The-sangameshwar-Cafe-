@@ -25,6 +25,19 @@ Built using **Vite + React + Tailwind CSS + Lucide Icons + Canvas Confetti**.
    ```
    The production-ready bundle will be created inside the `dist/` directory.
 
+4. **Deploy to GitHub Pages**:
+   - Create a repository on [github.com/new](https://github.com/new).
+   - Push your code:
+     ```bash
+     git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
+     git push -u origin main
+     ```
+   - In GitHub, go to **Settings > Pages > Source** and select **GitHub Actions** (it will deploy automatically on push), OR run:
+     ```bash
+     npm run deploy
+     ```
+     which automatically pushes the build to the `gh-pages` branch.
+
 ---
 
 ## 🛠️ How to Customize Your Cafe Website
