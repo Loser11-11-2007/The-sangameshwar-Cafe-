@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, Heart, Coffee, ShieldCheck, Flame, Users } from 'lucide-react';
 import { CAFE_INFO } from '../menuData';
 import { CoffeeBeanSvg, LeafSvg } from './Decorations';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function AboutPage({ onExploreMenu }) {
   const values = [
@@ -81,7 +82,7 @@ export default function AboutPage({ onExploreMenu }) {
               <div className="space-y-4">
                 <div className="rounded-3xl overflow-hidden aspect-[4/5] shadow-warm border border-beige/50">
                   <img
-                    src="/images/gallery/cozy-reading-nook.jpg"
+                    src={getAssetUrl("/images/gallery/cozy-reading-nook.jpg")}
                     alt="Cafe Reading Nook"
                     className="w-full h-full object-cover"
                   />
@@ -99,7 +100,7 @@ export default function AboutPage({ onExploreMenu }) {
                 </div>
                 <div className="rounded-3xl overflow-hidden aspect-[4/5] shadow-warm border border-beige/50">
                   <img
-                    src="/images/menu/cappuccino.jpg"
+                    src={getAssetUrl("/images/menu/cappuccino.jpg")}
                     alt="Handcrafted Coffee"
                     className="w-full h-full object-cover"
                   />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShoppingBag, Sparkles, Heart } from 'lucide-react';
 import { CoffeeBeanSvg, LeafSvg, TinyStarSvg, SteamSwirlSvg } from './Decorations';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function Hero({ onExploreMenu, onOrderNow }) {
   const marqueeItems = [
@@ -20,7 +21,7 @@ export default function Hero({ onExploreMenu, onOrderNow }) {
       {/* Background with warm ambient gradients & subtle photo overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-cafe.jpg"
+          src={getAssetUrl("/images/hero-cafe.jpg")}
           alt="The Sangameshwar Cafe Cozy Interior"
           className="w-full h-full object-cover object-center filter brightness-[0.9] contrast-[1.05]"
         />
@@ -129,7 +130,7 @@ export default function Hero({ onExploreMenu, onOrderNow }) {
               <div className="absolute top-2 left-2 sm:left-4 w-52 sm:w-60 bg-cream-light p-3 pb-5 rounded-2xl polaroid-shadow border border-beige/60 -rotate-6 hover:rotate-0 transition-transform duration-300 z-10">
                 <div className="aspect-square rounded-xl overflow-hidden mb-2.5 bg-beige/30">
                   <img
-                    src="/images/gallery/cozy-reading-nook.jpg"
+                    src={getAssetUrl("/images/gallery/cozy-reading-nook.jpg")}
                     alt="Cozy reading corner"
                     className="w-full h-full object-cover"
                   />
@@ -149,7 +150,7 @@ export default function Hero({ onExploreMenu, onOrderNow }) {
                 
                 <div className="aspect-square rounded-xl overflow-hidden mb-2.5 bg-beige/30">
                   <img
-                    src="/images/menu/cappuccino.jpg"
+                    src={getAssetUrl("/images/menu/cappuccino.jpg")}
                     alt="Swan Latte Art"
                     className="w-full h-full object-cover"
                   />

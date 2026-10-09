@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Coffee } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetUrl';
 
 /**
  * ImageWithFallback component
@@ -28,7 +29,8 @@ export default function ImageWithFallback({
     }
   };
 
-  const currentSrc = stage === 0 ? src : stage === 1 ? fallbackSrc : null;
+  const rawSrc = stage === 0 ? src : stage === 1 ? fallbackSrc : null;
+  const currentSrc = rawSrc ? getAssetUrl(rawSrc) : null;
 
   return (
     <div className={`relative overflow-hidden bg-cream-dark/50 ${aspectRatio} w-full rounded-2xl`}>

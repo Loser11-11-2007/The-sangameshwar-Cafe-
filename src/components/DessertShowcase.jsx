@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Sparkles, Heart } from 'lucide-react';
 import { MENU_ITEMS } from '../menuData';
 import ImageWithFallback from './ImageWithFallback';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function DessertShowcase({ onSelectCategory, onAddToCart, cartItems, onUpdateQuantity }) {
   // Filter dessert items
@@ -46,7 +47,7 @@ export default function DessertShowcase({ onSelectCategory, onAddToCart, cartIte
           <div className="md:col-span-7 bg-cream-light rounded-3xl p-6 sm:p-8 border border-beige/60 shadow-warm-lg flex flex-col justify-between">
             <div className="relative rounded-2xl overflow-hidden aspect-[16/10] mb-6">
               <img
-                src="/images/menu/chocolate-lava-cake.jpg"
+                src={getAssetUrl("/images/menu/chocolate-lava-cake.jpg")}
                 alt="Molten Chocolate Lava Cake"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

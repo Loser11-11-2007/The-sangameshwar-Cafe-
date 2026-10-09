@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { CAFE_INFO } from '../menuData';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function LightboxModal({
   items,
@@ -57,7 +58,7 @@ export default function LightboxModal({
       <div className="relative max-w-4xl w-full max-h-[85vh] flex flex-col items-center">
         <div className="relative max-h-[70vh] rounded-2xl overflow-hidden shadow-warm-xl border border-beige/40">
           <img
-            src={currentItem.image}
+            src={getAssetUrl(currentItem.image)}
             alt={currentItem.title}
             className="w-full h-auto max-h-[70vh] object-contain"
           />

@@ -3,6 +3,7 @@ import { ZoomIn, Camera, Sparkles } from 'lucide-react';
 import { GALLERY_ITEMS, CAFE_INFO } from '../menuData';
 import LightboxModal from './LightboxModal';
 import { InstagramSvg } from './Decorations';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export default function GallerySection() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -68,7 +69,7 @@ export default function GallerySection() {
                 }`}
               >
                 <img
-                  src={item.image}
+                  src={getAssetUrl(item.image)}
                   alt={item.title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
